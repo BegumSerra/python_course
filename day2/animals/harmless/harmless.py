@@ -1,9 +1,9 @@
-class Dangerous:
+class Harmless:
 	def __init__(self):
 		''' Constructor for this class. '''
 		# Create some member animals
-		self.members = ['Tiger', 'Elephant', 'Wild Cat', 'Shark']
+		self.members = ['Sparrow', 'Robin', 'Duck', 'Goldfish', 'Zebrafish']
 	def printMembers(self):
-		print('Printing members of the Dangerous class')
+		print('Printing members of the Harmless class')
 		for member in self.members:
 			print('\t%s ' % member)
