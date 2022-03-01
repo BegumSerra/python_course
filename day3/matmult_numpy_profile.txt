@@ -1,0 +1,23 @@
+Timer unit: 1e-06 s
+
+Total time: 0.009019 s
+File: matmult_numpy_profile.py
+Function: matmult at line 7
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     7                                           @profile
+     8                                           def matmult(N):
+     9                                               # NxN matrix
+    10         1          6.0      6.0      0.1      X = []
+    11        26         15.0      0.6      0.2      for i in range(N):
+    12        25       2337.0     93.5     25.9          X.append([np.random.randint(0,100) for r in range(N)])
+    13                                           
+    14                                               # Nx(N+1) matrix
+    15         1          1.0      1.0      0.0      Y = []
+    16        26         13.0      0.5      0.1      for i in range(N):
+    17        25       1335.0     53.4     14.8          Y.append([np.random.randint(0,100) for r in range(N+1)])
+    18                                           
+    19         1        339.0    339.0      3.8      result = np.matmul(X, Y)
+    20         1       4972.0   4972.0     55.1      print(result)
+    21         1          1.0      1.0      0.0      return result
